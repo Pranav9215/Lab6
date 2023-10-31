@@ -11,8 +11,12 @@ def encode(password):
 
     return encPassword
 
-def decode(encPassword):
-    pass
+def decode(password):
+    decoder = ''
+    for x in password:
+        decoded = str((int(x) - 3) % 10)
+        decoder += decoded
+    return decoder
 
 def main():
     while True:
